@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.category {
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 20px;
+}

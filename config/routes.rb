@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :splashs, only: [:index]
 
-  # resources :groups do 
-  #   resources :expenses
-  # end
+  resources :groups do 
+    resources :transactions
+  end
  
 
   root 'splashs#index'

@@ -1,0 +1,12 @@
+<h1>Transactions</h1>
+<div class="category-container">
+    <% @groups.each do |group| %>
+        <div class="category">
+          <span><%= group.icon %></span>
+          <span><%= group.name %></span>
+          <span>$ 56.67</span>
+          <p><%= group.created_at.strftime('%b %d, %Y') %></p>
+        </div>
+    <% end %>
+    <%= link_to "New Transaction", new_group_transaction_path %>
+</div>
