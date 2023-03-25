@@ -14,6 +14,4 @@ RSpec.describe 'Transaction page', type: :feature do
   it 'should expect log in before visiting categories page' do
     expect(page).to have_content('Log in')
   end
-
-
 end

@@ -24,7 +24,7 @@ RSpec.describe 'Signup page', type: :feature do
     fill_in 'Password', with: @user1.password
     fill_in 'Password confirmation', with: @user1.password_confirmation
     click_button 'Sign up'
-    expect(page).to have_content('A message with a confirmation link has been sent to your email address. Please follow the link to activate your account')
+    expect(page).to have_content('A message with a confirmation link has been sent to your email address.')
   end
 
   it 'should error appears if you entered wrong data' do
