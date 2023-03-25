@@ -1,13 +1,21 @@
 <h1>Categories</h1>
+<%= button_to "Log out", destroy_user_session_path,  class:"save", method: :delete %>
 <div class="category-container">
     <% @groups.each do |group| %>
-        <%= link_to group_transactions_path(group) do %>
+        <%= link_to group_entities_path(group) do %>
           <div class="category">
-            <span><%= group.icon %></span>
-            <span><%= group.name %></span>
-            <span>$ 56.67</span>
+            <div class="details">
+            <div class="img"><img src="<%= group.icon%>" width="80px"></div>
+            <h3><%= group.name %></h3>
+            <h4>$<%= group.total_amount %></h4>
+            </div>
             <p><%= group.created_at.strftime('%b %d, %Y') %></p>
           </div>
+          
         <% end %>
     <% end %>
+</div>
+
+<div>
+    <%= link_to "Add New Group", new_group_path %>
 </div>

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class TransactionControllerTest < ActionDispatch::IntegrationTest
+class EntityGroupTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

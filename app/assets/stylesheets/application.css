@@ -18,5 +18,16 @@
   margin-top: 20px;
   border: 1px solid black;
   border-radius: 6px;
-  padding: 20px;
+  padding-left: 20px;
+}
+
+.img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
 }
