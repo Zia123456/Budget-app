@@ -1,16 +1,23 @@
-<h1>Transactions</h1>
+<nav class="nav-bar">
+  <%= link_to 'Back', groups_path, class:"back" %>
+  <h1>Transactions</h1>
+  <%= button_to "Log out", destroy_user_session_path,  class:"save", method: :delete, class:'logout' %>
+</nav>
+<br>
+
 <div class="transaction-container">
     <% @entities.each do |entity| %>
         <div class="category">
           <div class="details">
             <h3><%= entity.name %></h3>
             <h4>$ <%= entity.amount %></h4>
+            <p><%= entity.created_at.strftime('%b %d, %Y') %></p>
           </div>
-          <p><%= entity.created_at.strftime('%b %d, %Y') %></p>
         </div>
     <% end %>
     <br>
-    <%= link_to "New Transaction", new_group_entity_path %>
-    <br>
-    <%= link_to 'Back', groups_path, class:"back" %>
+
+    <div class="add-new-tran">
+      <%= link_to "New Transaction", new_group_entity_path %>
+    </div>
 </div>

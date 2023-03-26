@@ -1,6 +1,11 @@
-<h1>Budget App</h1>
+<div class="container">
+    <h1 class="budget-text">Budget App</h1>
 
-  <h1>Welcome to my app</h1>
-  <p>Please <%= link_to "log in", new_user_session_path %>
-   or <%= link_to "sign up", new_user_registration_path %></p>
+  <div class="login-container"> 
+    <%= link_to "log in", new_user_session_path %>
+  </div>
+  <div class="signup-container">
+    <%= link_to "sign up", new_user_registration_path %>
+  </div>
 
+</div>

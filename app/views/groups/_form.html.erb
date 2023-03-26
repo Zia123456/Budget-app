@@ -2,15 +2,16 @@
 
     <div class="form-container">
         <br>
-        <%= form.label :name %>
         <br>
-        <%= form.text_field :name %>
         <br>
-        <%= form.label :icon %>
+        <%= form.text_field :name,placeholder: "Name", class: "input" %>
         <br>
-        <%= form.text_field :icon %>
         <br>
-        <%= form.submit %>
+        <%= form.text_field :icon,placeholder: "Icon", class: "input" %>
+        <br>
+        <div class="create-group">
+          <%= form.submit %>
+        </div>
     </div>
 
 <% end %>

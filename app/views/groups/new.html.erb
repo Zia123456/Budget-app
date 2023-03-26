@@ -1,5 +1,8 @@
-<h1> Create A New Category </h1>
+<nav class="nav-bar">
+  <%= link_to 'Back', groups_path, class:"back" %>
+  <h1> Create A New Category </h1>
+  <%= button_to "Log out", destroy_user_session_path,  class:"save", method: :delete, class:'logout' %>
+</nav>
 
 <%= render "form", group: @group %>
 
-<%= link_to 'Back', groups_path, class:"back" %>
