@@ -31,3 +31,12 @@
   display: flex;
   gap: 20px;
 }
+
+.nav-bar {
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
