@@ -1,0 +1,30 @@
+<h1> New Transaction </h1>
+
+<%= form_for @entity, url: group_entities_path  do |f| %>
+  <% if @entity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+      <ul>
+        <% @entity.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create Entity", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', group_entities_path, class:"back" %>

@@ -1,0 +1,16 @@
+<%= form_with model: group do |form| %>
+
+    <div class="form-container">
+        <br>
+        <%= form.label :name %>
+        <br>
+        <%= form.text_field :name %>
+        <br>
+        <%= form.label :icon %>
+        <br>
+        <%= form.text_field :icon %>
+        <br>
+        <%= form.submit %>
+    </div>
+
+<% end %>
