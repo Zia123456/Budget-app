@@ -2,8 +2,8 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <nav class="nav-bar">
-  <%= link_to 'Back', root_path, class:"back" %>
-    <h2>Log in</h2>
+  <%= link_to 'Back', root_path, class:"back color" %>
+    <h2 class="color">Log in</h2>
     <div class="actions">
     <%= f.submit "Log in" %>
   </div>
@@ -12,10 +12,12 @@
   <br>
   <br>
   <div class="field">
+    <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input" %>
   </div>
 
   <div class="field">
+    <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "input" %>
   </div>
 
