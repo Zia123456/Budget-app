@@ -63,7 +63,7 @@ Budget App is a mobile web application which enable users to manage their budget
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- [live Demo] (https://celadon-pegasus-e1e3c5.netlify.app)
 
 ## Introduction
 
