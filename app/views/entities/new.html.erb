@@ -1,5 +1,12 @@
-<h1> New Transaction </h1>
 
+<nav class="nav-bar">
+  <%= link_to 'Back', group_entities_path, class:"back" %>
+  <h1 class="color"> New Transaction </h1>
+  <%= button_to "Log out", destroy_user_session_path,  class:"save", method: :delete, class:'logout color' %>
+</nav>
+<br>
+<br>
+<br>
 <%= form_for @entity, url: group_entities_path  do |f| %>
   <% if @entity.errors.any? %>
     <div id="error_explanation">
@@ -11,20 +18,14 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.text_field :name, class: 'form-control',placeholder: "Name", class: "input" %>
   </div>
-
   <div class="field">
-    <%= f.label :amount %>
-    <%= f.number_field :amount, class: 'form-control' %>
+    <%= f.number_field :amount, class: 'form-control',placeholder: "Amount", class: "input" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Create Entity", class: 'btn btn-primary' %>
+  <div class="create-group">
+    <%= f.submit "Create Entity", class: 'btn btn-primary color' %>
   </div>
 <% end %>
 
-<%= link_to 'Back', group_entities_path, class:"back" %>

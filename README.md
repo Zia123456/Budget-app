@@ -63,7 +63,7 @@ Budget App is a mobile web application which enable users to manage their budget
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- [live Demo] (https://zia123456.github.io/Budget-app/)
 
 ## Introduction
 
